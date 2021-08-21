@@ -1,6 +1,8 @@
 # doing necessary imports
 import threading
 import io
+import time
+
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 from matplotlib.figure import Figure
 
@@ -68,6 +70,7 @@ def index():
             review_count = 0
             scrapper_object = FlipkratScrapper(executable_path=ChromeDriverManager().install(),
                                                chrome_options=chrome_options)
+            time.sleep(15)
             mongoClient = MongoDBManagement(username='Kavita', password='kavita1610')
             scrapper_object.openUrl("https://www.flipkart.com/")
             logger.info("Url hitted")
