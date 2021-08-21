@@ -68,8 +68,10 @@ def index():
         expected_review = int(request.form['expected_review'])
         try:
             review_count = 0
+            logger.info("Before going to exception....")
             scrapper_object = FlipkratScrapper(executable_path=ChromeDriverManager().install(),
                                                chrome_options=chrome_options)
+            logger.info("Not executed !!")
             time.sleep(15)
             mongoClient = MongoDBManagement(username='Kavita', password='kavita1610')
             scrapper_object.openUrl("https://www.flipkart.com/")
@@ -99,6 +101,7 @@ def index():
                 return redirect(url_for('feedback'))
 
         except Exception as e:
+            logger.info("After Exception...")
             raise Exception("(app.py) - Something went wrong while rendering all the details of product.\n" + str(e))
 
     else:
