@@ -12,6 +12,8 @@ import pandas as pd
 
 from mongoDBOperations import MongoDBManagement
 
+from logger_class import getLog
+logger = getLog('flipkrat.py')
 
 class FlipkratScrapper:
 
@@ -21,8 +23,10 @@ class FlipkratScrapper:
         :param executable_path: executable path of chrome driver.
         """
         try:
+            logger.info('Trying to Hit chrome driver')
             self.driver = webdriver.Chrome(executable_path=executable_path, chrome_options=chrome_options)
         except Exception as e:
+            logger.info('Chrome driver could not open, in exception')
             raise Exception(f"(__init__): Something went wrong on initializing the webdriver object.\n" + str(e))
 
     def waitExplicitlyForCondition(self, element_to_be_found):

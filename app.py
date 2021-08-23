@@ -71,6 +71,9 @@ def index():
             logger.info("Before going to exception....")
             scrapper_object = FlipkratScrapper(executable_path=ChromeDriverManager().install(),
                                                chrome_options=chrome_options)
+            ##
+            #webdriver.
+            ##
             logger.info("Not executed !!")
             time.sleep(15)
             mongoClient = MongoDBManagement(username='Kavita', password='kavita1610')

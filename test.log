@@ -50,3 +50,9 @@
 2021-08-21 16:13:27,831:INFO:flipkrat.py:login popup handled
 2021-08-21 16:13:28,246:INFO:flipkrat.py:Search begins for gts2e
 2021-08-21 16:13:31,167:INFO:flipkrat.py:Data saved in scrapper file
+2021-08-23 22:04:38,054:INFO:flipkrat.py:Before going to exception....
+2021-08-23 22:04:43,379:INFO:flipkrat.py:Not executed !!
+2021-08-23 22:05:02,643:INFO:flipkrat.py:Url hitted
+2021-08-23 22:05:02,962:INFO:flipkrat.py:login popup handled
+2021-08-23 22:05:03,433:INFO:flipkrat.py:Search begins for gts2e
+2021-08-23 22:05:06,400:INFO:flipkrat.py:Data saved in scrapper file
