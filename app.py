@@ -69,10 +69,22 @@ def index():
         try:
             review_count = 0
             logger.info("Before going to exception....")
-            scrapper_object = FlipkratScrapper(executable_path=ChromeDriverManager().install(),
-                                               chrome_options=chrome_options)
-            ##
-            #webdriver.
+            '''scrapper_object = FlipkratScrapper(executable_path=ChromeDriverManager().install(),
+                                               chrome_options=chrome_options)'''
+            ''' My Code  Changes  '''
+            driver = webdriver.Chrome()
+            # Assign URL
+            url = "https://www.geeksforgeeks.org/"
+
+            # New Url
+            new_url = "https://www.facebook.com/"
+
+            # Opening first url
+            driver.get(url)
+
+            # Open a new window
+            driver.execute_script("window.open('');")
+            driver.get_url()
             ##
             logger.info("Not executed !!")
             time.sleep(15)
